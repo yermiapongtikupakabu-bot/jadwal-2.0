@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: 'Press Start 2P', cursive;
-      background: url('https://images.pexels.com/photos/33339461/pexels-photo-33339461.jpeg') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1614064641938-e7dc8b224542?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
       background-size: cover;
       margin: 0;
       padding: 0;
@@ -17,14 +17,14 @@
       flex-direction: column;
       color: white;
     }
-
     header {
       background-color: rgba(0, 0, 0, 0.7);
       text-align: center;
       padding: 1.5em;
       font-size: 1.2em;
+      font-weight: 600;
+      color: #fff;
     }
-
     .container {
       padding: 2em;
       background-color: rgba(0, 0, 0, 0.6);
@@ -32,17 +32,19 @@
       margin: auto;
       border-radius: 12px;
       flex: 1;
+      color: #fff;
+      text-align: left;
     }
-
     h2 {
       border-left: 5px solid #ffcc00;
       padding-left: 0.6em;
       margin-top: 1.5em;
+      font-weight: 600;
     }
-
     .editable {
       padding: 1.2em;
       background-color: rgba(0, 0, 0, 0.7);
+      color: #ffffff;
       border-radius: 10px;
       font-size: 14px;
       line-height: 1.6;
@@ -50,20 +52,16 @@
       margin-bottom: 1.5em;
       min-height: 2em;
       border: 1px solid rgba(255,255,255,0.2);
-      white-space: pre-wrap;
     }
-
     .editable:focus {
       outline: 2px dashed #fff;
     }
-
     .edit-hint {
       font-size: 0.85em;
       opacity: 0.7;
       margin-top: -1em;
       margin-bottom: 1em;
     }
-
     footer {
       text-align: center;
       padding: 1em;
@@ -74,50 +72,51 @@
 </head>
 <body>
   <header>
-     Jadwal Harian Jemy 
+    🌟 Jadwal Harian Jemmy 🌟
   </header>
 
   <div class="container">
     <h2>Jadwal Sekolah</h2>
-    <p class="edit-hint">(-_-)</p>
-    <div class="editable" contenteditable="true">
+    <p class="edit-hint">(Klik untuk edit. Perubahan tersimpan otomatis)</p>
+    <div class="editable" contenteditable="true" data-id="jadwal-sekolah">
 Senin:
-- Matematika Wajib
-- Mulok
-- Bahasa Inggris TL
-- Sejarah
+- Matematika Wajib  
+- Mulok  
+- Bahasa Inggris TL  
+- Sejarah  
 
 Selasa:
-- PJOK
-- Bahasa Inggris TL
-- Fisika
-- Agama
-- Kimia
+- PJOK  
+- Bahasa Inggris TL  
+- Fisika  
+- Agama  
+- Kimia  
 
 Rabu:
-- Kimia
-- Bahasa Inggris Wajib
-- Bahasa Indonesia
-- PPKN
-- PKWU
-- Kimia
+- Kimia  
+- Bahasa Inggris Wajib  
+- Bahasa Indonesia  
+- PPKN  
+- PKWU  
+- Kimia  
 
 Kamis:
-- Matematika Wajib
-- Fisika
-- Seni Musik
-- Bahasa Indonesia
-- Matematika TL
+- Matematika Wajib  
+- Fisika  
+- Seni Musik  
+- Bahasa Indonesia  
+- Matematika TL  
 
 Jumat:
-- Matematika TL
-- Agama
-- Bahasa Inggris TL
+- Matematika TL  
+- Agama  
+- Bahasa Inggris TL  
 - Bahasa Inggris Wajib
     </div>
+
     <h2>Jadwal Harian</h2>
-    <p class="edit-hint">(-_-)</p>
-    <div class="editable" contenteditable="true">
+    <p class="edit-hint">(Klik untuk edit. Perubahan tersimpan otomatis)</p>
+    <div class="editable" contenteditable="true" data-id="jadwal-harian">
 04.30 - Bangun tidur & cuci muka  
 05.00 - Sholat subuh & ngaji  
 06.00 - Sarapan & persiapan sekolah  
@@ -131,5 +130,19 @@ Jumat:
     </div>
   <footer>
     Dibuat oleh Jemmy 🧠 dengan nuansa modern + RPG pixel 🎮
+  </footer>
+
+  <!-- JavaScript simpan ke localStorage -->
+  <script>
+    document.querySelectorAll('.editable').forEach((el) => {
+      const id = el.getAttribute('data-id');
+      const saved = localStorage.getItem(id);
+      if (saved) el.innerText = saved;
+
+      el.addEventListener('input', () => {
+        localStorage.setItem(id, el.innerText);
+      });
+    });
+  </script>
 </body>
 </html>
