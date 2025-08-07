@@ -13,8 +13,6 @@
       margin: 0;
       padding: 0;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
       color: white;
     }
     header {
@@ -22,48 +20,123 @@
       text-align: center;
       padding: 1.5em;
       font-size: 1.2em;
-      font-weight: 600;
-      color: #fff;
     }
     .container {
       padding: 2em;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.65);
       max-width: 900px;
       margin: auto;
       border-radius: 12px;
-      flex: 1;
       color: #fff;
-      text-align: left;
     }
     h2 {
       border-left: 5px solid #ffcc00;
       padding-left: 0.6em;
       margin-top: 1.5em;
-      font-weight: 600;
     }
     .editable {
-      padding: 1.2em;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: #ffffff;
+      background-color: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
       border-radius: 10px;
+      padding: 1.5em;
+      margin-bottom: 2em;
       font-size: 14px;
-      line-height: 1.6;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      margin-bottom: 1.5em;
-      min-height: 2em;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-    .editable:focus {
-      outline: 2px dashed #fff;
+      line-height: 2;
     }
     .edit-hint {
-      font-size: 0.85em;
+      font-size: 0.8em;
       opacity: 0.7;
       margin-top: -1em;
       margin-bottom: 1em;
     }
     footer {
       text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+      opacity: 0.6;
+    }
+    ul {
+      margin-top: 0.3em;
+      margin-bottom: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🌟 Jadwal Harian Jemmy 🌟
+  </header>
+  <div class="container">
+    <h2>Jadwal Sekolah</h2>
+    <p class="edit-hint">(Klik di area ini untuk edit)</p>
+    <div class="editable" contenteditable="true">
+      <div><strong>Senin:</strong>
+        <ul>
+          <li>Matematika Wajib</li>
+          <li>Mulok</li>
+          <li>Bahasa Inggris TL</li>
+          <li>Sejarah</li>
+        </ul>
+      </div>
+      <div><strong>Selasa:</strong>
+        <ul>
+          <li>PJOK</li>
+          <li>Bahasa Inggris TL</li>
+          <li>Fisika</li>
+          <li>Agama</li>
+          <li>Kimia</li>
+        </ul>
+      </div>
+      <div><strong>Rabu:</strong>
+        <ul>
+          <li>Kimia</li>
+          <li>Bahasa Inggris Wajib</li>
+          <li>Bahasa Indonesia</li>
+          <li>PPKN</li>
+          <li>PKWU</li>
+          <li>Kimia</li>
+        </ul>
+      </div>
+      <div><strong>Kamis:</strong>
+        <ul>
+          <li>Matematika Wajib</li>
+          <li>Fisika</li>
+          <li>Seni Musik</li>
+          <li>Bahasa Indonesia</li>
+          <li>Matematika TL</li>
+        </ul>
+      </div>
+      <div><strong>Jumat:</strong>
+        <ul>
+          <li>Matematika TL</li>
+          <li>Agama</li>
+          <li>Bahasa Inggris TL</li>
+          <li>Bahasa Inggris Wajib</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Jadwal Harian</h2>
+    <p class="edit-hint">(Klik di area ini untuk edit)</p>
+    <div class="editable" contenteditable="true">
+      <ul>
+        <li>04.30 - Bangun tidur & cuci muka</li>
+        <li>05.00 - Sholat subuh & ngaji</li>
+        <li>06.00 - Sarapan & persiapan sekolah</li>
+        <li>07.00 - Berangkat sekolah</li>
+        <li>13.00 - Pulang & makan siang</li>
+        <li>14.00 - Istirahat</li>
+        <li>15.00 - Belajar mandiri</li>
+        <li>17.00 - Olahraga / free time</li>
+        <li>19.00 - Sholat isya & makan malam</li>
+        <li>20.00 - Belajar / persiapan tidur</li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    Dibuat oleh Jemmy 🧠 dengan nuansa modern + RPG pixel 🎮
+  </footer>
+</body>
+</html>      text-align: center;
       padding: 1em;
       font-size: 0.9em;
       opacity: 0.6;
