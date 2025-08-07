@@ -4,45 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jadwal Harian Jemmy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: monospace;
-      background-image: url('https://i.ibb.co/W3qLJ7c/pixel-rpg-bg.png'); /* Gambar pixel RPG */
-      background-size: cover;
-      background-position: center;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #1e1e2f, #2c3e50);
       color: #fff;
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
     header {
       background-color: rgba(0, 0, 0, 0.7);
       text-align: center;
-      padding: 1em;
-      font-size: 1.5em;
+      padding: 1.5em;
+      font-size: 1.8em;
+      font-weight: 600;
     }
     .container {
-      padding: 1em;
-      background-color: rgba(0, 0, 0, 0.6);
-      max-width: 800px;
+      padding: 2em;
+      background-color: rgba(255, 255, 255, 0.05);
+      max-width: 900px;
       margin: auto;
-      border-radius: 10px;
+      border-radius: 12px;
+      flex: 1;
     }
     h2 {
-      border-bottom: 2px dashed #fff;
-      padding-bottom: 0.3em;
+      border-left: 5px solid #ffcc00;
+      padding-left: 0.6em;
+      margin-top: 1.5em;
+      font-weight: 600;
     }
     .editable {
-      padding: 0.5em;
+      padding: 1em;
       background-color: rgba(255,255,255,0.1);
-      border: 1px dashed #ccc;
-      margin-bottom: 1em;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      margin-bottom: 1.5em;
       min-height: 2em;
+    }
+    .editable:focus {
+      outline: 2px dashed #fff;
     }
     footer {
       text-align: center;
       padding: 1em;
       font-size: 0.9em;
       opacity: 0.6;
+    }
+    .edit-hint {
+      font-size: 0.85em;
+      opacity: 0.7;
+      margin-top: -1em;
+      margin-bottom: 1em;
     }
   </style>
 </head>
@@ -51,7 +67,8 @@
     🌟 Jadwal Harian Jemmy 🌟
   </header>
   <div class="container">
-    <h2>Jadwal Sekolah (editable)</h2>
+    <h2>Jadwal Sekolah</h2>
+    <p class="edit-hint">(Klik di area ini untuk edit)</p>
     <div class="editable" contenteditable="true">
       Senin: Matematika Wajib, Mulok, Bahasa Inggris TL, Sejarah<br>
       Selasa: PJOK, Bahasa Inggris TL, Fisika, Agama, Kimia<br>
@@ -60,7 +77,8 @@
       Jumat: Matematika TL, Agama, Bahasa Inggris TL, Bahasa Inggris Wajib
     </div>
 
-    <h2>Jadwal Harian (editable)</h2>
+    <h2>Jadwal Harian</h2>
+    <p class="edit-hint">(Klik di area ini untuk edit)</p>
     <div class="editable" contenteditable="true">
       04.30 - Bangun tidur & cuci muka<br>
       05.00 - Sholat subuh & ngaji<br>
@@ -75,7 +93,7 @@
     </div>
   </div>
   <footer>
-    Dibuat oleh Jemmy 🧠 dengan nuansa pixel RPG 🎮
+    Dibuat oleh Jemmy 🧠 dengan nuansa modern + RPG pixel 🎮
   </footer>
 </body>
 </html>
