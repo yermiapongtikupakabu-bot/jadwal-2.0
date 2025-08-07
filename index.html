@@ -17,16 +17,16 @@ background-size: cover;
       flex-direction: column;
     }
     header {
-      .schedule {
-  background-color: rgba(0, 0, 0, 0.6) !important;
-  color: #fff !important;
-}
-  padding: 20px;
-  margin: 20px;
-  border-radius: 18px;
-  font-size: 14px;
-  line-height: 1.6;
-}
+     <style>
+  .schedule-box {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    color: #fff !important;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+</style>
       text-align: center;
       padding: 1.5em;
       font-size: 1.8em;
@@ -78,7 +78,7 @@ background-size: cover;
   <div class="container">
     <h2>Jadwal Sekolah</h2>
     <p class="edit-hint">(Klik di area ini untuk edit)</p>
-    <div class="editable" contenteditable="true">
+    <div class="editable schedule-box" contenteditable="true">
       Senin: Matematika Wajib, Mulok, Bahasa Inggris TL, Sejarah<br>
       Selasa: PJOK, Bahasa Inggris TL, Fisika, Agama, Kimia<br>
       Rabu: Kimia, Bahasa Inggris Wajib, Bahasa Indonesia, PPKN, PKWU, Kimia<br>
